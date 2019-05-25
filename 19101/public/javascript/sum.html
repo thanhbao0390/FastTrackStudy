@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>HTML Tutorial</title>
+<head>
+    <script>
+        function sum() {
+
+            var a = document.getElementById("varA").value;
+            var b = document.getElementById("varB").value;
+
+            document.getElementById("tong").value = parseInt(a) + parseInt(b);
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <h1>Sum</h1>
+    <div>
+        <label>So A</label><input id="varA" type="text" /></div>
+    <div><label>So B</label><input id="varB" type="text" /></div>
+    <div><button onclick="sum()">Sum</button></div>
+    <div><label >Tong</label><input id="tong" type="text" /></div>
+
+</body>
+
+</html>

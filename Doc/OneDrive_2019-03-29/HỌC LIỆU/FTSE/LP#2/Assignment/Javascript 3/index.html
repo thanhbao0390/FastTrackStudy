@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Form Valid | VinaEnter Edu</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="ckeditor/ckeditor.js"> </script>
+</head>
+<body>
+	<div id="page-wrap">
+		<h1>Form validation</h1>
+		<p>Tích hợp ckeditor vào trường nội dung và valid các thuộc tính sau của form:</p>
+		<div id="contact-area">
+			
+			<form method="post" action="">
+				<label for="Name">Họ tên:</label>
+				<input type="text" name="Name" id="Name" required/>
+				
+				<label for="City">Thành phố:</label>
+				<input type="text" name="City" id="City" required/>
+	
+				<label for="Email">Email:</label>
+				<input type="email" name="Email" id="Email" required />
+				
+				<label for="Message">Nội dung:</label><br />
+				<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+
+				<input type="submit" name="submit" value="Gửi đi" class="submit-button" />
+			</form>
+			
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+	<script>
+			 CKEDITOR.replace( 'Message');
+	</script>
+</body>
+</html>

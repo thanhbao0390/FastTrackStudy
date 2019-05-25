@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .menu {
+            list-style: none;
+        }
+
+        .menu .link:nth-child(1) {
+            border-left: 1px solid black;
+        }
+
+        .menu .link {
+            float: left;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            position: relative;
+        }
+        .menu .link:hover .sub-menu{
+            display: block;
+        }
+        .menu .link a {
+            padding-right: 10px;
+            padding-left: 10px;
+            transition: all 0.5s;
+        }
+
+        .menu .link a:hover {
+
+            background: chartreuse;
+        }
+        .sub-menu{
+            position: absolute;
+            list-style: none;
+            padding-left:0px;
+            display:none;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li class="link">
+            <a href="#"> Sport</a>
+            <ul class="sub-menu">
+                <li class="sub-link">
+                    <a href="#"> Sport</a>
+                </li>
+                <li class="sub-link">
+                    <a href="#">Media </a>
+                </li>
+                <li class="sub-link">
+                    <a href="#">Music</a>
+                </li>
+            </ul>
+        </li>
+        <li class="link ">
+            <a href="#">Media </a>
+        </li>
+        <li class="link">
+            <a href="#">Music</a>
+            <ul class="sub-menu">
+                    <li class="sub-link">
+                        <a href="#"> Sport</a>
+                    </li>
+                    <li class="sub-link">
+                        <a href="#">Media </a>
+                    </li>
+                    <li class="sub-link">
+                        <a href="#">Music</a>
+                    </li>
+                </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

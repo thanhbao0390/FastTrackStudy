@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		/*li{
+			cursor: pointer;
+		}*/
+		@keyframes hien{
+			from{
+				opacity: 0;
+			}
+			to{
+				opacity: 1;
+			}
+			0%{
+				left:100%;
+			}
+			33%{
+				left:66%;
+			}
+			66%{
+				left:33%;
+			}
+			100%{
+				left:0;
+			}
+		}
+		ul{
+			list-style: none;
+			padding-left:0px;
+		}
+		a{
+			text-decoration: none;
+		}
+		.menu .link{
+			float:left;
+			margin-right:5px;
+			background:green;
+			position: relative;
+			transition: all 2s ease-out;
+		}
+		.menu .link:hover{
+			background:yellow;
+		}
+		.menu .link:hover .sub-menu{
+			display:block;
+		}
+		.menu .link>a{
+			padding: 5px;
+			display: block;
+		}
+		.sub-menu{
+			animation:hien 0.5s;
+			top:110%;
+			position: absolute;
+			width:100px;
+			border:1px solid black;
+			border-bottom:none;
+			display:none;
+		}
+		.sub-menu .sub-link{
+			border-bottom:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<ul class="menu">
+		<li class="link"><a href="#">Trang chủ </a></li>
+		<li class="link">
+			<a href="#">Tin tức</a>
+			<ul class="sub-menu">
+				<li class="sub-link"><a href="#">Trang chủ </a></li>
+				<li class="sub-link"><a href="#">Tin tức</a></li>
+				<li class="sub-link"><a href="#">Liên hệ</a></li>
+				<li class="sub-link"><a href="#">Thông tin</a></li>
+			</ul>
+		</li>
+		<li class="link"><a href="#">Liên hệ</a></li>
+		<li class="link"><a href="#">Thông tin</a></li>
+	</ul>
+</body>
+</html>

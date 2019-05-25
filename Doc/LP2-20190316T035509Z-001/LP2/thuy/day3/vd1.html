@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		.row{
+			display: flex;
+			flex-wrap: wrap;
+	 	 	align-content: space-between;
+	 	 	box-sizing: border-box;
+		}
+		.col{
+			width:24%;
+			height:100px;
+			border:1px solid black;
+		}
+		@media (max-width: 640px){
+			.col{
+				width:49%;
+			}
+		} 
+	</style>
+</head>
+<body>
+	<div class="row">
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+	</div>
+</body>
+</html>

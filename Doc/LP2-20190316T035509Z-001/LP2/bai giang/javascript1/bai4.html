@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+   n=6;
+   t=1;
+   s=1;
+   status=0;
+  
+   while(s<=n){
+        tg=t+s;
+       if(tg==n){
+        status=1;
+       }
+       t=s;
+       s=tg;
+   }
+   if(status==0){
+       document.write("Ko phai la so fibonanci");
+   }else{
+       document.write("La so fibonanci");
+   }
+   
+</script>
+</html>

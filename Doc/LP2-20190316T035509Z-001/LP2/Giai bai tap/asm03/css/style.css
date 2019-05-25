@@ -1,0 +1,51 @@
+/* item start */
+.item{
+    height:500px;
+    background:green;
+}
+.item .menu-bar{
+    height:100px;
+    background:palevioletred;
+}
+.item .menu-bar .menu{
+    list-style: none;
+}
+.item .menu-bar .menu .link{
+    float:left;
+    width:100px;
+    height:100px;
+    background:red;
+    margin-right:10px;
+}
+.item .main{}
+.item .main .left{
+    width:50%;
+    height:400px;
+    background:yellow;
+    float:left
+}
+.item .main .left img{
+    float: left;
+    width:50%;
+    display:inline;
+}
+.item .main .left p{
+    float:left;
+    width:50%;
+    margin:0 !important;
+    padding:0 !important;
+}
+.item .main .center{
+    width:30%;
+    height:400px;
+    background:blue;
+    float:left
+}
+.item .main .right{
+    width:20%;
+    height:400px;
+    background:purple;
+    float:left
+}
+
+/* item end */

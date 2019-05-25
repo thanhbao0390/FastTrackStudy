@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bai tap 7</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link  rel="stylesheet" type="text/css" href="style.css">
+        <script src="javacript.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header id="sub-header">
+            <div id="name-web">
+                <p>Curriculumn Vitae Web</p>
+            </div>
+            <div id="sub-menu">
+                <ul id="menu-web">
+                    <a href="home.html"><li class="menu-home">HOME</li></a>
+                    <a href="detail.html"><li class="menu-home">LIST CV</li></a>
+                    <a href="detail.html"><li class="menu-home">ABOUT</li></a>
+                    <a href="#"><li class="menu-home">BLOG</li></a>
+                    <a href="#"><li class="menu-home">CONTACT</li></a>
+                </ul>
+            </div>
+            <div class="clear" ></div>
+            <div id="notice1" style="float:left">
+            </div>
+            <div id="content">
+                <h1>DANH SÁCH LẬP TRÌNH VIÊN DỰ ÁN</h1> 
+                <table id="table" border='1px' style="width:100%">
+                    <tr>
+                        <th>STT</th>
+                        <th> Ảnh </th>
+                        <th>Họ và Tên</th>
+                        <th>Năm sinh</th>
+                        <th>Địa chỉ</th>
+                        <th>Bằng cấp</th>
+                        <th>Chi tiết</th>
+                    </tr>
+                    <tr id="hidden">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>   
+            <div id="notice2">
+            </div>
+            <script>
+                var n;
+                var x=0;
+                for(var i=0;i<SV.length;i++){
+                    n=$("#hidden").clone();
+                    $("td:nth-child(1)").html("abc");
+                    /*$("#table").append(n);
+                    $("tr:nth-child("+(i+3)+") td:nth-child(1)").html(i+1);
+                    $("tr:nth-child("+(i+3)+") td:nth-child(2)").html("<img src='"+SV[i].Img+"'>");
+                    $("tr:nth-child("+(i+3)+") td:nth-child(3)").html(SV[i].Name);
+                    $("tr:nth-child("+(i+3)+") td:nth-child(4)").html(SV[i].Birth);
+                    $("tr:nth-child("+(i+3)+") td:nth-child(5)").html(SV[i].Add);
+                    $("tr:nth-child("+(i+3)+") td:nth-child(6)").html(SV[i].Cert);
+                    $("tr:nth-child("+(i+3)+") td:nth-child(7)").html("<a href='detail.html'><i class='far fa-address-book'></i></a>");
+                }*/
+    }
+            </script>
+        </header>
+        <footer style="width:100%; height:150px; background:#BB9090;margin-top:auto;clear: both">
+            
+        </footer>
+    </body>
+</html>

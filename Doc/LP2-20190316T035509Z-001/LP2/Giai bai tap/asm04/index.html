@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            box-sizing: border-box;
+        }
+        .wrapper{
+            padding:10px 5%;
+        }
+        .menu{
+            width:100%;
+            height:70px;
+            border:1px solid black;
+            margin-bottom:20px;
+        }
+        .main{
+            width:100%;
+            height:1000px;
+            border:1px solid black;
+        }
+        .main .left{
+            width:50%;
+            min-height:100%;
+            border:1px solid red;
+            float:left
+        }
+        .main .left .top{
+            width:100%;
+            border:1px solid blue;
+            height:50px;
+            margin-bottom:20px;
+        }
+        .main .left .giua{
+            width:100%;
+            border:1px solid blue;
+            height:700px;
+            margin-bottom:20px;
+        }
+        .main .left .bottom{
+            width:100%;
+            border:1px solid blue;
+            height:200px;
+            display: flex;
+        }
+        .main .left .bottom .item{
+            width:33%;
+            border:1px solid yellow;
+            height:100%;
+            /* float:left */
+        }
+        .main .center{
+            width:19%;
+            min-height:100%;
+            border:1px solid red;
+            float:left;
+            padding:0px 20px;
+            height:300px;
+        }
+        .main .right{
+            width:30%;
+            min-height:100%;
+            border:1px solid red;
+            float:left
+        }
+        @media (max-width:1000px){
+           
+            .main .left{
+                width:100%;
+                display:none;
+            }
+            .main .center{
+                width:100%;
+            }
+            .main .right{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            
+        </div>
+        <div class="main">
+            <div class="left">
+                <div class="top"></div>
+                <div class="giua"></div>
+                <div class="bottom">
+                    <div class="item"></div>
+                    <div class="item"></div>
+                    <div class="item"></div>
+                </div>
+            </div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+    </div>
+</body>
+</html>

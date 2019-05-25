@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link type="text/css" rel="stylesheet" href="newcss.css"> -->
+        <meta charset="UTF-8">
+    </head>
+    <body >
+            
+    <form>
+        <p class='Info' >Họ và Tên:</p>
+        <input id='Input1' type="text"/>
+        <p class='Info'>Tuổi:</p>
+        <input id='Input2'  type="text"/>
+        <p class='Info'>Lớp:</p>
+        <input id='Input3'  type="text"/>
+        <p class='Info'>Ngày sinh:</p>
+        <input  id='Input4' type="text"/>
+        <p class='Info'>Địa Chỉ:</p>
+        <input id='Input5' type="text"/>
+        <br>
+        <button type="reset" id='click' onclick='OutPut()'>Truy Xuất</button>
+
+        <input id="editKey" type="hidden" value=""/>
+        <button type="reset"  onclick='save()'>Save</button>
+
+        <table id='table' border='1px'>
+            <tr class='hang'>
+                <th>STT</th>
+                <th>Họ và Tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+                <th>Ngày Sinh</th>
+                <th>Địa Chỉ</th>
+                <th>---</th>
+            </tr>
+        </table>
+    </form>
+        <script>
+            var i=1;
+            
+            var mang = [];
+            function OutPut(){
+                var SinhVien={};
+                SinhVien.Name=document.getElementById("Input1").value;
+                SinhVien.Age=document.getElementById("Input2").value;
+                SinhVien.Class=document.getElementById("Input3").value;
+                SinhVien.Birthday=document.getElementById("Input4").value;
+                SinhVien.Address=document.getElementById("Input5").value;
+                var n=document.getElementById("table");
+                n.innerHTML+="<tr><td>"+
+                         i+"</td>"+"<td>"+
+                        SinhVien.Name+"</td>"+
+                        "<td>"+SinhVien.Age+"</td>"+
+                        "<td>"+SinhVien.Class+"</td>"+
+                        "<td>"+SinhVien.Birthday+"</td>"+
+                        "<td>"+SinhVien.Address+"</td>"+
+                        "<td><button type='button' onclick='edit("+(i-1)+");' >Edit</button></td>"+
+                        "</tr>";
+                        mang[i-1] = SinhVien;
+
+                i++;
+                
+            }
+
+            function edit(i) {
+                var SinhVien= mang[i];
+                document.getElementById("Input1").value=SinhVien.Name;
+                document.getElementById("Input2").value=SinhVien.Age;
+                document.getElementById("Input3").value=SinhVien.Class;
+                document.getElementById("Input4").value=SinhVien.Birthday;
+                document.getElementById("Input5").value=SinhVien.Address;
+
+                document.getElementById("editKey").value=i;
+            }
+
+            function save() {
+                var SinhVien={};
+                SinhVien.Name=document.getElementById("Input1").value;
+                SinhVien.Age=document.getElementById("Input2").value;
+                SinhVien.Class=document.getElementById("Input3").value;
+                SinhVien.Birthday=document.getElementById("Input4").value;
+                SinhVien.Address=document.getElementById("Input5").value;
+
+                var i = document.getElementById("editKey").value;
+                mang[i] = SinhVien;
+
+                draw();
+            }
+
+            function draw() {
+                var str="<tr class='hang'><th>STT</th><th>Họ và Tên</th><th>Tuổi</th><th>Lớp</th><th>Ngày Sinh</th><th>Địa Chỉ</th><th>---</th></tr>";
+
+                for(i=1;i<=mang.length; i++) {
+                    var SinhVien= mang[i-1];
+                    str+="<tr><td>"+
+                         i+"</td>"+"<td>"+
+                        SinhVien.Name+"</td>"+
+                        "<td>"+SinhVien.Age+"</td>"+
+                        "<td>"+SinhVien.Class+"</td>"+
+                        "<td>"+SinhVien.Birthday+"</td>"+
+                        "<td>"+SinhVien.Address+"</td>"+
+                        "<td><button type='button' onclick='edit("+(i-1)+");' >Edit</button></td>"+
+                        "</tr>";
+                }
+
+                var n=document.getElementById("table");
+                n.innerHTML = str;
+
+            }
+            
+            
+        </script>
+    </body>
+</html>

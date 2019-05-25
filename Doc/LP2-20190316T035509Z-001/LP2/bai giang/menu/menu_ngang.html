@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		ul{
+			list-style: none;
+		}
+		.nav .item{
+			float:left;
+			border:1px solid black;
+			border-right:none;
+		}
+		.nav .item:last-child{
+			border-right:1px solid black;
+		}
+		.nav .item a{
+			text-decoration: none;
+			color:black;
+			padding:0px 10px;
+			display:block;
+		}
+		.nav .item a:hover{
+			background: green;
+		}
+		.nav .item{
+			position: relative;
+		}
+		.nav .item .submenu{
+			position: absolute;
+			left:-1px;
+			top:19px;
+			width:100%;
+			padding:0px;
+			border:1px solid pink;
+			display: none;
+		}
+		.nav .item:hover .submenu{
+			display:block;
+		}
+		.border_red{
+			border-top:1px solid red !important;
+		}
+		.border_blue{
+			border-top:1px solid blue !important;
+		}
+		.border_green{
+			border-top:1px solid green !important;
+		}
+		.red{
+			color:red !important;
+		}
+		.green{
+			color:green !important;
+		}
+		.blue{
+			color:blue !important;
+		}
+		.link{
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+<body>
+	<!-- navigation -->
+	<ul class="nav">
+		<li class="item border_green">
+			<a href="#" class="link green">Trang chủ</a>
+		</li>
+		<li class="item border_blue">
+			<a href="#" class="link blue">Đồ Nam</a>
+			<ul class="submenu">
+				<li>
+					<a href="#">Áo</a>
+				</li>
+				<li>
+					<a href="#">Quần</a>
+				</li>
+			</ul>
+		</li>
+		<li class="item border_blue">
+			<a href="#" class="link blue">Đồ Nam</a>
+			<ul class="submenu">
+				<li>
+					<a href="#">Áo</a>
+				</li>
+				<li>
+					<a href="#">Quần</a>
+				</li>
+			</ul>
+		</li>
+		<li class="item  border_red" >
+			<a href="#" class="link red">Đồ nữ</a>
+			<ul class="submenu">
+				<li>
+					<a href="#">Áo</a>
+				</li>
+				<li>
+					<a href="#">Quần</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

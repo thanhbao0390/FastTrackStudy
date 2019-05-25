@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bai tap 7</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link  rel="stylesheet" type="text/css" href="style.css">
+        <script src="javacript.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header id="sub-header">
+            <div id="name-web">
+                <p>Curriculumn Vitae Web</p>
+            </div>
+            <div id="sub-menu">
+                <ul id="menu-web">
+                    <a href="home.html"><li class="menu-home">HOME</li></a>
+                    <a href="detail.html"><li class="menu-home">LIST CV</li></a>
+                    <a href="detail.html"><li class="menu-home">ABOUT</li></a>
+                    <a href="#"><li class="menu-home">BLOG</li></a>
+                    <a href="#"><li class="menu-home">CONTACT</li></a>
+                </ul>
+            </div>
+            <div class="clear" ></div>
+            <div id="notice1">
+            </div>
+            <div id="content">
+                <div id="images">
+                    
+                </div>
+                <div id="info">
+                    <table id="infoTab" border="1px">
+                        <tr id="coppy">
+                            <th></th>
+                            <td></td>
+                        </tr>
+                    </table>
+                    
+                </div>
+                <div class="clear"></div>
+                <div id="tableEx">
+                      <table id="ex" border="1px">
+                        <tr>
+                            <th>Ten Ngon Ngu</th>
+                            <th>So nam kinh nghiem</th>
+                        </tr>
+                        <tr id="addlast">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>  
+                </div>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    $("#images").html("<img width='200' src='"+SV[0].Img+"'>");
+                });
+                function add(a,b,c){
+                    var x =$("#coppy").clone(true);
+                    $("#infoTab").append(x);
+                $("#infoTab tr:nth-child("+a+") th").html(b);
+                $("#infoTab tr:nth-child("+a+") td").html(c);
+                }
+                add(2,"Ten Lap Trinh Vien",SV[0].Name);
+                add(3,"Nam Sinh",SV[0].Birth);
+                add(4,"Bang cap",SV[0].Cert);
+                add(5,"Dia Chi",SV[0].Add);
+                $("#infoTab tr:nth-child(1)").hide();
+                function addex(a,b,c){
+                    var x =$("#addlast").clone(true);
+                    $("#ex").append(x);
+                $("#ex tr:nth-child("+a+") td:nth-child(1)").html(b);
+                $("#ex tr:nth-child("+a+") td:nth-child(2)").html(c);
+                }
+                addex(3,"JAVA",SV[0].ExJV);
+                addex(4,"PHP",SV[0].ExPHP);
+                $("#ex tr:nth-child(2)").hide();
+            </script>
+            <div id="notice2">
+                
+            </div>
+        </header>
+        <div class="clear"></div>
+        <footer style="width:100%; height:150px; background:#BB9090;margin-top:auto">
+            
+        </footer>
+    </body>
+</html>

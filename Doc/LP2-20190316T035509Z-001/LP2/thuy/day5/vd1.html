@@ -1,0 +1,27 @@
+<script type="text/javascript">
+	function xinchao(){
+		document.write("Xin chao");
+		document.write("toi ten la: Nam");
+		document.write("<br>")
+	}
+	for (var i = 0; i < 3; i++) {
+		xinchao();
+
+	}
+	n= prompt("Nhap gia tri");
+	
+	function nhapmang(phantu){
+		var ar=[];
+		for(i=0;i<phantu;i++){
+			ar[i]=prompt("Moi nhap gia tri phan tu thu "+(i+1));
+		}
+		return ar;
+	}
+	function inmang(mang){
+		for (var i = 0; i < mang.length; i++) {
+			document.write(mang[i]);
+		}
+	}
+	var ar = nhapmang(n);
+	inmang(ar);
+</script>

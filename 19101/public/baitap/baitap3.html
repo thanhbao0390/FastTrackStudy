@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="newcss.css">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+    <body >   
+    <form>
+        <div id="print">
+        <p class='Info' >Họ và Tên:</p>
+        <input id='Input1' type="text" value=""/>
+        <p class='Info'>Tuổi:</p>
+        <input id='Input2'  type="text"/>
+        <p class='Info'>Lớp:</p>
+        <input id='Input3'  type="text"/>
+        <p class='Info'>Ngày sinh:</p>
+        <input  id='Input4' type="text"/>
+        <p class='Info'>Địa Chỉ:</p>
+        <input id='Input5' type="text"/>
+        </div>
+        <div class="clear"></div>
+        <button type="reset" id='click' onclick='OutPut()'>Truy Xuất</button>
+        <button type="button" id='save' onclick='notice()'>Lưu</button>
+        <table id='table' border='1px'>
+            <tr class='hang'>
+                <th>STT</th>
+                <th>Họ và Tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+                <th>Ngày Sinh</th>
+                <th>Địa Chỉ</th>
+                <th>Chỉnh sửa</th>
+            </tr>
+        </table>
+        <div id="notice">
+            <p>Bạn có muốn lưu thông tin đã chỉnh sửa không?</p>
+            <button type="button" id="yes" onclick="Save()">Có</button>
+            <button type="button" id="no" onclick="noticeNo()">Hủy</button>
+        </div>
+            
+    </form>
+        <script>
+            var c;
+            var i=0;
+            var ArrName=[];//Mang chua Ten
+            var ArrAge=[];//Mang chua Tuoi
+            var ArrClass=[];//Mang Chua Lop
+            var ArrBirthday=[];//Mang chua ngay sinh
+            var ArrAddress=[];//Mang chua dia chi
+            //Ham nhap thong tin vao bang
+            function OutPut(){
+                var STT=parseInt(i)+1;
+                var Name=document.getElementById("Input1").value;
+                var Age=document.getElementById("Input2").value;
+                var Class=document.getElementById("Input3").value;
+                var Birthday=document.getElementById("Input4").value;
+                var Address=document.getElementById("Input5").value;
+                var n=document.getElementById("table");
+                n.innerHTML+="<tr onclick='Edit(this)'>"+
+                        "<td>"+STT+"</td>"+
+                        "<td>"+Name+"</td>"+
+                        "<td>"+Age+"</td>"+
+                        "<td>"+Class+"</td>"+
+                        "<td>"+Birthday+"</td>"+
+                        "<td>"+Address+"</td>"+
+                        "<td>"+"<i class='fas fa-edit'></i>"+"</td>"+
+                        "</tr>";
+                //Luu data vao bang
+                ArrName.push(Name);
+                ArrAge.push(Age);
+                ArrClass.push(Class);
+                ArrBirthday.push(Birthday);
+                ArrAddress.push(Address);
+                i++;
+                document.getElementById("table").style.opacity="1";
+            }
+           
+            //Ham chinh sua thong tin
+            function Edit(x){
+                b=(parseInt(x.rowIndex)-1);
+                var a=document.getElementById("print");
+                a.innerHTML="<p class='Info' >Họ và Tên:</p>"+
+                        "<input id='Input1' type='text' value='"+ArrName[b]+"'"+"/>"+
+                        "<p class='Info'>Tuổi:</p>"+
+                        "<input id='Input2'  type='text' value='"+ArrAge[b]+"'"+"/>"+
+                        "<p class='Info'>Lớp:</p>"+
+                        "<input id='Input3'  type='text' value='"+ArrClass[b]+"'"+"/>"+
+                        "<p class='Info'>Ngày sinh:</p>"+
+                        "<input id='Input4'  type='text' value='"+ArrBirthday[b]+"'"+"/>"+
+                        "<p class='Info'>Địa Chỉ:</p>"+
+                        "<input id='Input5'  type='text' value='"+ArrAddress[b]+"'"+"/>";
+                c=b;
+                document.getElementById("save").style.opacity="1";
+            }
+            //Ham hien thong bao luu thong tin
+            function notice(){
+                document.getElementById("notice").style.opacity="1";
+                document.getElementById("yes").style.opacity="1";
+                document.getElementById("no").style.opacity="1";
+            }
+            //Luu sau khi chinh sua
+            function Save(){
+                ArrName[c]=document.getElementById("Input1").value;
+                ArrAge[c]=document.getElementById("Input2").value;
+                ArrClass[c]=document.getElementById("Input3").value;
+                ArrBirthday[c]=document.getElementById("Input4").value;
+                ArrAddress[c]=document.getElementById("Input5").value;
+                var n=document.getElementById("table").children;
+                n[c+1].innerHTML=
+                "<tr onclick='Edit(this)'>"+
+                        "<td>"+(c+1)+"</td>"+
+                        "<td>"+ArrName[c]+"</td>"+
+                        "<td>"+ArrAge[c]+"</td>"+
+                        "<td>"+ArrClass[c]+"</td>"+
+                        "<td>"+ArrBirthday[c]+"</td>"+
+                        "<td>"+ArrAddress[c]+"</td>"+
+                        "<td>"+"<i class='fas fa-edit'></i>"+"</td>"+
+                        "</tr>";
+                //Sau khi luu chinh sua se reset cac input
+                var reset=document.getElementById("print");
+                reset.innerHTML="<p class='Info' >Họ và Tên:</p>"+
+                        "<input id='Input1' type='text'"+"/>"+
+                        "<p class='Info'>Tuổi:</p>"+
+                        "<input id='Input2'  type='text'"+"/>"+
+                        "<p class='Info'>Lớp:</p>"+
+                        "<input id='Input3'  type='text'"+"/>"+
+                        "<p class='Info'>Ngày sinh:</p>"+
+                        "<input id='Input4'  type='text'"+"/>"+
+                        "<p class='Info'>Địa Chỉ:</p>"+
+                        "<input id='Input5'  type='text'"+"/>";
+                document.getElementById("save").style.opacity="0";
+                document.getElementById("notice").style.opacity="0";
+                document.getElementById("yes").style.opacity="0";
+                document.getElementById("no").style.opacity="0";
+            }
+            // Khong luu sau chinh sua
+            function noticeNo(){
+                var reset=document.getElementById("print");
+                reset.innerHTML="<p class='Info' >Họ và Tên:</p>"+
+                        "<input id='Input1' type='text'"+"/>"+
+                        "<p class='Info'>Tuổi:</p>"+
+                        "<input id='Input2'  type='text'"+"/>"+
+                        "<p class='Info'>Lớp:</p>"+
+                        "<input id='Input3'  type='text'"+"/>"+
+                        "<p class='Info'>Ngày sinh:</p>"+
+                        "<input id='Input4'  type='text'"+"/>"+
+                        "<p class='Info'>Địa Chỉ:</p>"+
+                        "<input id='Input5'  type='text'"+"/>";
+                document.getElementById("save").style.opacity="0";
+                document.getElementById("notice").style.opacity="0";
+                document.getElementById("yes").style.opacity="0";
+                document.getElementById("no").style.opacity="0";
+            }
+        </script>
+    </body>
+</html>

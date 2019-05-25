@@ -1,0 +1,112 @@
+.clear{
+    clear:both;
+}
+html, body {
+  height: 100%;
+}
+#sub-header{
+    width:100%;
+    height:130px;
+    background:#323534;
+    border-bottom:5px solid #00C6F0;
+}
+#name-web{
+    width:100%;
+    height:60%;
+    background:#5B3F08;
+}
+#sub-menu{
+    width:68.7%;
+    height:40%;
+    background:white;
+    margin-left:16%;
+}
+#menu-web{
+    list-style: none;
+    margin:0px;
+    padding-left:20px;
+}
+.menu-home{
+    width:15%;
+    height:10%;
+    float:left;
+    background:#565656;
+    margin-top:10px;
+    margin-right:15px;
+    font-size:16px;
+    font-family: arial;
+    font-weight: bold;
+    border-top-left-radius:7px;
+    border-top-right-radius:5px;
+    text-align: center;
+    padding-top:10px;
+    color:white;
+}
+.menu-home:hover{
+    background:#000000;
+}
+#notice1{
+    width:16%;
+    height:800px;
+    background:#79FF20;
+    float:left;
+    margin-top:5px;
+}
+#notice2{
+    width:15.3%;
+    height:800px;
+    background:#79FF20;
+    float:right;
+    margin-top:5px;
+}
+#content{
+    width:68.7%;
+    height:800px;
+    background:#698184;
+    float:left;
+    margin-top:5px;
+}
+#content h1{
+    margin-left:10px
+}
+table img{
+    width:100px;
+    height:80px;
+}
+#hidden{
+}
+
+
+#content #images{
+   width:30%;
+   height:30%;
+   background:#73BBBB;
+   border-radius: 250px;
+   margin:10px;
+   overflow:hidden;
+   float:left;
+}
+#images img{
+    width:100%;
+}
+#info{
+   width:50%;
+   height:30%;
+   float:left;
+   margin-top:20px;
+   margin-left:30px;
+}
+#infoTab{
+    width:100%;
+    height:70%;
+}
+#tableEx{
+   margin-top:40px;
+   margin-left:40%;
+   width:40%;
+   height:30%;
+}
+#tableEx #ex{
+    width:100%;
+    height:50%;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Tạo hiệu ứng xoay 360 độ cho chữ khi load trang*/
+        /*Định nghĩa 1 vòng hành động cho hiệu ứng */
+        @keyframes quay360 {
+            from {
+
+                transform: rotateX(0deg);
+            }
+
+            to {
+
+                transform: rotateX(360deg);
+            }
+        }
+
+        h1 {
+
+            animation: quay360 1s;/* Gọi hiệu ứng hành động */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item">
+        <h1>Animation</h1>
+    </div>
+
+</body>
+
+</html>

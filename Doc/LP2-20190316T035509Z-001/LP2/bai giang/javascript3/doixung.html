@@ -1,0 +1,22 @@
+<script type="text/javascript">
+  arSo = [2,1,2,1,2,1,2];
+ 
+  function kt_doixung(day_so){
+    
+    var n = arSo.length-1;//6
+    for(var i = 0 ; i <= n;i++){
+      if(arSo[i]!=arSo[n-i]){
+        status=1;
+        return false;
+      }
+    }
+    return true;
+  }
+  
+  kq = kt_doixung(arSo);
+  if(kq){
+    document.write("doi xung");
+  }else{
+    document.write("Khong doi xung");
+  }
+</script>

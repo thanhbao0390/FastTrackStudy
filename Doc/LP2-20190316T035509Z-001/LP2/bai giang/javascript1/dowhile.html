@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .abc{
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+   var n;
+   var status=1;
+   do{
+       if(status==1){
+           str = 'Vui long nhap so chan';
+           n= prompt(str);
+           status++;
+       }else{
+           str = "Ban nhap sai. Vui long nhap lai";
+           n= prompt(str);
+       }
+   }while(n%2!=0);
+   document.write("Ban da nhap dung");
+</script>
+</html>

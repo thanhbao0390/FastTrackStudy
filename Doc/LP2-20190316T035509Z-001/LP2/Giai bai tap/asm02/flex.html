@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#main {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #c3c3c3;
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-flow: row-reverse wrap; /* Safari 6.1+ */
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#main div  {
+  width: 25%;
+  height: 50px;
+}
+</style>
+</head>
+<body>
+
+<h1>The flex-flow Property</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/GNp2ZKRqkkY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div id="main">
+  <div style="background-color:coral;">A</div>
+  <div style="background-color:lightblue;">B</div>
+  <div style="background-color:khaki;">C</div>
+  <div style="background-color:pink;">D</div>
+  <div style="background-color:lightgrey;">E</div>
+  <div style="background-color:lightgreen;">F</div>
+</div>
+
+<p><b>Note:</b> Internet Explorer 10 and earlier versions do not support the flex-flow property.</p>
+<p><b>Note:</b> Safari 6.1 (and newer) supports an alternative, the -webkit-flex-flow property.</p>
+
+</body>
+</html>

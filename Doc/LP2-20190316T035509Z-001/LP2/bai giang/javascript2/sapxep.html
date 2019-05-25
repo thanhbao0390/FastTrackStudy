@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body>
+  <script>
+    dsTuoi = [191,32,31,121,51,91]
+    document.write("Truoc sap xep <br>");
+    for(var i = 0;i<dsTuoi.length;i++){
+       document.write(dsTuoi[i]+"-");
+    }
+    document.write("Sau sap xep <br>");
+    for(var i = 0;i<=4;i++){
+      for(var j = i+1 ;j<=5;j++ ){
+        if(dsTuoi[i]>dsTuoi[j]){
+          tg = dsTuoi[i];
+          dsTuoi[i]=dsTuoi[j];
+          dsTuoi[j]=tg;
+        }
+      }
+    }
+
+    for(var i = 0;i<=5;i++){
+       document.write(dsTuoi[i]+"-");
+    }
+  </script>
+</body>
+</html>

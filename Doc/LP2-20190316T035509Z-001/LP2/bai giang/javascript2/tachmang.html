@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+</head>
+<body>
+  <script>
+    dayso = [1,2,3,4,5,6]
+    mangle=mang_le(dayso);
+    mangchan= mang_chan(dayso);
+    //hien thi
+    document.write("Mang chan: ");
+    for(var i = 0;i<mangchan.length;i++){
+      document.write(mangchan[i]+"-");
+    }
+    document.write("<br> Mang le: ");
+    for(var i = 0;i<mangle.length;i++){
+      document.write(mangle[i]+"-");
+    }
+
+    function mang_chan(day_so){
+      mangchan=[];
+      for(var i = 0;i<day_so.length;i++){
+        if(day_so[i]%2==0){
+          mangchan.push(day_so[i]);
+        }
+      }
+      return mangchan;
+    }
+    function mang_le(day_so){
+      mangle=[];
+      for(var i = 0;i<day_so.length;i++){
+        if(day_so[i]%2!=0){
+          mangle.push(day_so[i]);
+        }
+      }
+      return mangle;
+    }
+  </script>
+</body>
+</html>

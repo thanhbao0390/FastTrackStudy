@@ -1,0 +1,2 @@
+window.SV=[{Img:"../images/ngoctrinh.jpg",Name:"Vo Dinh Tuan",Cert:"Dai Hoc",Birth:"17/03/1994",Add:"Quang Ngai",ExJV:4,ExPHP:2},{Img:"../images/ngoctrinh.jpg",Name:"Vo Dinh Tuan",Cert:"Dai Hoc",Birth:"17/03/1994",Add:"Quang Ngai",ExJV:4,ExPHP:2},{Img:"../images/ngoctrinh.jpg",Name:"Vo Dinh Tuan",Cert:"Dai Hoc",Birth:"17/03/1994",Add:"Quang Ngai",ExJV:4,ExPHP:2},{Img:"../images/ngoctrinh.jpg",Name:"Vo Dinh Tuan",Cert:"Dai Hoc",Birth:"17/03/1994",Add:"Quang Ngai",ExJV:4,ExPHP:2}];
+window.y;
